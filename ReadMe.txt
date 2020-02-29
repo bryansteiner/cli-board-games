@@ -1,23 +1,3 @@
-*****************Grading**************
-graded by: Jon Shidal
-Grade: 98/100
-deductions:
--2 poor modularity, should separate out header files
-
-*************************************
-
-========================================================================
-	Project:	lab4
-	Name:		Bryan Steiner, Elie Schramm, Ashley Shin
-	Class:		CSE 332
-========================================================================
-Collaboration:
-	Each of us as group members contributed about exactly evenly to this lab. We did all the work together
-	on a single computer. Everyone was involved in the coding process but beyond that:
-		Bryan was responsible for debugging.
-		Elie was responsible for all the various trials.
-		Ashley was responsible for the README.txt.
-		
 Files:
 	Lab4.h			- Lab 4 Header file
 	lab4.cpp		- Lab 4 Source file
