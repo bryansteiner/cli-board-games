@@ -9,96 +9,6 @@ Files:
 	magicSquareGame.cpp 	- Magic Square Game Source file
 	reversiGame.cpp		- Reversi Game Source file
 
-Copy Control Design Decisions:
-
-	GameBase:
-		Copy constructor-
-			1. We allowed use of copy constructor but did not implement it on our own.
-			2. We initialize a shared pointer to a GameBase object but never need to copy it.
-			3. We let compiler synthesize constructor if necessary (by not doing anything).
-		Move constructor-
-			1. We allowed use of move constructor but did not implement it on our own.
-			2. We did not need to pass any copies of objects by r-value reference.
-			3. We let compiler synthesize constructor if necessary (by not doing anything).
-		Copy-assignment operator-
-			1. We allowed use of copy-assignment operator even though we didn't use it for this class.
-			2. We had no need to overload this operator.
-			3. We let compiler use default definition of operator.
-		Move-assignment operator-
-			1. We allowed use of move-assignment operator but did not use it on our own.
-			2. We had no need to overload this operator.
-			3. We let compiler use default definition of operator.
-		Destructor-
-			1. We did not overload the destructor, so it is allowed. 
-			2. The default destructor does what we need and it is necessary to have.
-			3. We let compiler synthesize destructor so it is not prevented. 
-
-	NineAlmonds:
-		Copy constructor-
-			1. We allowed use of copy construction but did not implement it on our own.
-			2. We only needed to construct one NineAlmonds object for our game.
-			3. We did not end the declaration with delete (let compiler synthesize constructor if necessary).
-		Move constructor-
-			1. We allowed use of move constructor but did not implement it on our own.
-			2. We did not need to pass any copies of objects by r-value reference.
-			3. We let compiler synthesize constructor if necessary (by not doing anything).
-		Copy-assignment operator-
-			1. We allowed use of copy-assignment operator even though we didn't use it for this class.
-			2. We had no need to overload this operator.
-			3. We let compiler use default definition of operator.
-		Move-assignment operator-
-			1. We allowed use of move-assignment operator but did not use it on our own.
-			2. We had no need to overload this operator.
-			3. We let compiler use default definition of operator.
-		Destructor-
-			1. We did not overload the destructor, so it is allowed. 
-			2. The default destructor does what we need and it is necessary to have.
-			3. We let compiler synthesize destructor so it is not prevented. 
-
-	MagicSquare:
-		Copy constructor-
-			1. We allowed use of copy construction but did not implement it on our own.
-			2. We only needed to construct one MagicSquare object for our game.
-			3. We did not end the declaration with delete (let compiler synthesize constructor if necessary).
-		Move constructor-
-			1. We allowed use of move constructor but did not implement it on our own.
-			2. We did not need to pass any copies of objects by r-value reference.
-			3. We let compiler synthesize constructor if necessary (by not doing anything).
-		Copy-assignment operator-
-			1. We allowed use of copy-assignment operator even though we didn't use it for this class.
-			2. We had no need to overload this operator.
-			3. We let compiler use default definition of operator.
-		Move-assignment operator-
-			1. We allowed use of move-assignment operator but did not use it on our own.
-			2. We had no need to overload this operator.
-			3. We let compiler use default definition of operator.
-		Destructor-
-			1. We did not overload the destructor, so it is allowed. 
-			2. The default destructor does what we need and it is necessary to have.
-			3. We let compiler synthesize destructor so it is not prevented. 
-
-	Reversi:
-		Copy constructor-
-			1. We allowed use of copy construction but did not implement it on our own.
-			2. We only needed to construct one Reversi object for our game.
-			3. We did not end the declaration with delete (let compiler synthesize constructor if necessary).
-		Move constructor-
-			1. We allowed use of move constructor but did not use it on our own.
-			2. We did not need to pass any copies of objects by r-value reference.
-			3. We let compiler synthesize constructor if necessary (by not doing anything).
-		Copy-assignment operator-
-			1. We allowed use of copy-assignment operator even though we didn't use it for this class.
-			2. We had no need to overload this operator.
-			3. We let compiler use default definition of operator.
-		Move-assignment operator-
-			1. We allowed use of move-assignment operator but did not use it on our own.
-			2. We had no need to overload this operator.
-			3. We let compiler use default definition of operator.
-		Destructor-
-			1. We did not overload the destructor, so it is allowed. 
-			2. The default destructor does what we need and it is necessary to have.
-			3. We let compiler synthesize destructor so it is not prevented. 
-
 Save/Restore Design Decisions:
 
 	When the user asks to quit, we ask if they would like to save the game. If so, we write "Reversi" followed by 
@@ -107,12 +17,6 @@ Save/Restore Design Decisions:
 	For restoring, if the file starts with "Reversi" then we start reading in the data that is there. We add construct 
 	the game_pieces and add them to a temporary vector. If the length of the vector is the same as the dimensions say 
 	it should be (i.e. correct number of pieces) then we replace the board vector with that vector.s
-	
-Errors/Warnings: 
-
-	1. We had an issue where we flipped the pieces in the isLegal() method instead of as a result of the isLegal() method
-
-	2. We had a signed, unsigned conversion issue that we corrected.
 
 Cases:
 
