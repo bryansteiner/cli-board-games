@@ -9,7 +9,7 @@ Files:
 	magicSquareGame.cpp 	- Magic Square Game Source file
 	reversiGame.cpp		- Reversi Game Source file
 
-Save/Restore Design Decisions:
+Save/Restore:
 
 	When the user asks to quit, we ask if they would like to save the game. If so, we write "Reversi" followed by 
 	a bool for whose turn it is and the names of the two players. After that we write the necessary info to construct 
